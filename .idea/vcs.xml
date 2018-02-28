@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/../antis-old" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/common" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/commonservice" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/commontest" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/contract" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/dal" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/deploy" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/integrationtest" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/template" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../antis-old/web" vcs="svn" />
+  </component>
+</project>
