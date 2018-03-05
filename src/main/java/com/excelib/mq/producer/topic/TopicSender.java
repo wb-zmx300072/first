@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
  * @description   Topic生产者发送消息到Topic
  * 
  */
-
-@Component("topicSender")
+/*
+@Component("topicSender")*/
 public class TopicSender {
 	
 	@Autowired

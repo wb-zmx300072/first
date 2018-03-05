@@ -26,19 +26,30 @@ http://java.sun.com/xml/ns/javaee ">
   - $Id$
   -->
 
+    <!-- 加载spring的配置文件，例如hibernate、jms等集成 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:applicationContext*.xml;
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <!--springmvc配置开始-->
     <servlet>
-        <servlet-name>let'sGo</servlet-name>
+        <servlet-name>springMVC</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>WEB-INF/let'sGo-servlet.xml</param-value>
+            <param-value>classpath:spring-mvc.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>let'sGo</servlet-name>
+        <servlet-name>springMVC</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
@@ -54,7 +65,7 @@ http://java.sun.com/xml/ns/javaee ">
         <url-pattern>/*</url-pattern>
     </filter-mapping>-->
     <!-- spring session 开始-->
-    <filter>
+<!--    <filter>
         <filter-name>springSessionRepositoryFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
@@ -63,7 +74,7 @@ http://java.sun.com/xml/ns/javaee ">
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>ERROR</dispatcher>
-    </filter-mapping>
+    </filter-mapping>-->
     <!-- spring session结束-->
     <!--以上截止sessionfilter -->
 
