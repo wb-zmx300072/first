@@ -141,6 +141,13 @@
       <artifactId>dispatch-http_2.11</artifactId>
       <version>0.8.10</version>
     </dependency>
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.6.0</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>

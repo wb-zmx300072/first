@@ -78,5 +78,6 @@
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: net.databinder:dispatch-futures_2.11:0.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang:scala-actors:2.11.0" level="project" />
+    <orderEntry type="library" name="Maven: redis.clients:jedis:2.6.0" level="project" />
   </component>
 </module>

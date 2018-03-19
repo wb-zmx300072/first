@@ -32,8 +32,8 @@ public class Msg {
         msg.setMsgTypeId("7_3");
         msg.setReceiverNo("60918");
         msg.setSenderNo("77294");
-//        msg.setTitle("this is title" + DateUtil.formateDatetime(new Date()));
-//        msg.setContent("this is content"+ DateUtil.formateDatetime(new Date()));
+//        msg.setTitle("this is title" + DateUtil.java.formateDatetime(new Date()));
+//        msg.setContent("this is content"+ DateUtil.java.formateDatetime(new Date()));
         msg.setTitle("this is title" );
         msg.setContent("this is content");
         msg.setReceiverAlias("60918");
