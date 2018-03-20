@@ -2,16 +2,19 @@ package com.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
  * @Description：TODO
  * @Author wb-zmx300072 2018/3/19 12:50
  */
+@Component
 public class RedisPoolUtil {
     private  static final Logger logger = LoggerFactory.getLogger(RedisPoolUtil.class);
     private JedisPool pool;
@@ -20,6 +23,7 @@ public class RedisPoolUtil {
     @Resource
     public JedisPoolConfig config;
 
+    @PostConstruct
     public void init() {
         pool = new JedisPool(config, PropertiesUtil.getProperty("cache.redis.servers"), Integer.parseInt(PropertiesUtil.getProperty("cache.redis.port")), 4000);
     }
@@ -134,7 +138,11 @@ public class RedisPoolUtil {
         return result;
     }
 
+    public JedisPoolConfig getConfig() {
+        return config;
+    }
 
-
-
+    public void setConfig(JedisPoolConfig config) {
+        this.config = config;
+    }
 }

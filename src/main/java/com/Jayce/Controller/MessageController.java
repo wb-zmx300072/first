@@ -1,3 +1,4 @@
+/*
 package com.Jayce.Controller;
 
 import com.Jayce.Service.ConsumerService;
@@ -13,9 +14,11 @@ import javax.annotation.Resource;
 import javax.jms.Destination;
 import javax.jms.TextMessage;
 
+*/
 /**
  * Created by Administrator on 2017/1/5.
- */
+ *//*
+
 @Controller
 public class MessageController {
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
@@ -48,3 +51,4 @@ public class MessageController {
     }
 
 }
+*/

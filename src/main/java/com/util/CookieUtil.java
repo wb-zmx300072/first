@@ -19,13 +19,18 @@ public class CookieUtil {
 
     private static String LOGIN_SESSION_NAME = "LOGIN_SESSION_ID";
 
-    private static int LOGIN_SESSION_TIME = 60 * 30;
+    public static int LOGIN_SESSION_TIME = 60 * 30;
 
     public static String getLoginCookie(HttpServletRequest request){
         Cookie cookie = getCookie(request,LOGIN_SESSION_NAME);
-        String cookieVal = cookie.getValue();
-        return cookieVal;
+        if(cookie!= null){
+            String cookieVal = cookie.getValue();
+            return cookieVal;
+        }else{
+            return "";
+        }
     }
+
 
     public static Cookie getCookie(HttpServletRequest request,String name){
         Cookie[] cookies = request.getCookies();

@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <!-- 版本管理 -->
   <properties>
-    <springframework>4.1.8.RELEASE</springframework>
+    <springframework>5.0.4.RELEASE</springframework>
   </properties>
 
   <dependencies>
@@ -147,7 +147,28 @@
       <version>2.6.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.9.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.9.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.4</version>
+    </dependency>
 
+    <!--spring session-->
+    <dependency>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-data-redis</artifactId>
+      <version>1.2.0.RELEASE</version>
+    </dependency>
   </dependencies>
 
   <build>
