@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="antis.bundle:war">
-    <output-path>$PROJECT_DIR$/../antis-old/bundle/target</output-path>
-    <root id="archive" name="antis.war">
-      <element id="artifact" artifact-name="antis.bundle:war exploded" />
-    </root>
-  </artifact>
-</component>
