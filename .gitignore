@@ -10,7 +10,8 @@ test.db
 .project
 .settings
 .springBeans
-
+classes
+lib
 ### IntelliJ IDEA ###
 .idea
 *.iws
