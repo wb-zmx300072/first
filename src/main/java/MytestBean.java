@@ -22,4 +22,22 @@
  */
 public class MytestBean {
 
+    public static void main(String[] args) {
+/*        testMethod("a","b");
+        testMethod("a","b","c");
+        testMethod("a","b","d");*/
+        String[] arrStr = {"d","e","f"};
+        testMethod("a","b",arrStr);
+    }
+
+    public static void testMethod(String opt1,String opt2,String... opt){
+
+        if(opt!= null && opt.length>0){
+            for (int i=0;i<opt.length;i++){
+                System.out.println(opt[i]);
+            }
+        }
+
+    }
+
 }
