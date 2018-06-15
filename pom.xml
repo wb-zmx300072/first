@@ -1,188 +1,205 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>springmvc</groupId>
-  <artifactId>springmvc</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>springmvc Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <!-- 版本管理 -->
-  <properties>
-    <springframework>5.0.4.RELEASE</springframework>
-  </properties>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>springmvc</groupId>
+    <artifactId>springmvc</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+         <module>basic</module>
+         <module>learnspringmvc</module>
+        <module>database</module>
+    </modules>
+    <name>ParentProject</name>
+    <url>http://maven.apache.org</url>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.10</version>
-      <scope>test</scope>
-    </dependency>
+    <!-- 版本管理 -->
+    <properties>
+        <springframework>3.2.10.RELEASE</springframework>
+        <project.version>1.0-SNAPSHOT</project.version>
+    </properties>
+
+    <dependencies>
+        <!-- JSP相关 -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+            <version>2.5</version>
+        </dependency>
 
 
-    <!-- JSP相关 -->
-    <dependency>
-      <groupId>jstl</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <scope>provided</scope>
-      <version>2.5</version>
-    </dependency>
 
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.46</version>
-    </dependency>
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${springframework}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>${springframework}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${springframework}</version>
+        </dependency>
 
-    <!-- spring -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>${springframework}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${springframework}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${springframework}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>${springframework}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jms</artifactId>
-      <version>${springframework}</version>
-    </dependency>
-    <!-- xbean 如<amq:connectionFactory /> -->
-    <dependency>
-      <groupId>org.apache.xbean</groupId>
-      <artifactId>xbean-spring</artifactId>
-      <version>3.16</version>
-    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${springframework}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${springframework}</version>
+        </dependency>
 
-    <!-- activemq -->
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-core</artifactId>
-      <version>5.7.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-pool</artifactId>
-      <version>5.12.1</version>
-    </dependency>
 
-    <!-- 自用jar包，可以忽略-->
-    <dependency>
-      <groupId>commons-httpclient</groupId>
-      <artifactId>commons-httpclient</artifactId>
-      <version>3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
-      <version>4.5.3</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-    </dependency>
-    <dependency>
-      <groupId>net.jcip</groupId>
-      <artifactId>jcip-annotations</artifactId>
-      <version>1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>net.jcip</groupId>
-      <artifactId>jcip-annotations</artifactId>
-      <version>1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven</groupId>
-      <artifactId>maven-plugin-registry</artifactId>
-      <version>2.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpmime</artifactId>
-      <version>4.1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
-      <version>4.5.5</version>
-    </dependency>
-    <dependency>
-      <groupId>apache-httpclient</groupId>
-      <artifactId>commons-httpclient</artifactId>
-      <version>3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient-cache</artifactId>
-      <version>4.1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>net.databinder</groupId>
-      <artifactId>dispatch-http_2.11</artifactId>
-      <version>0.8.10</version>
-    </dependency>
-    <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
-      <version>2.6.0</version>
-    </dependency>
 
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-core</artifactId>
-      <version>2.9.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-annotations</artifactId>
-      <version>2.9.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.9.4</version>
-    </dependency>
+        <!-- xbean 如<amq:connectionFactory /> -->
+        <dependency>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-spring</artifactId>
+            <version>3.16</version>
+        </dependency>
 
-    <!--spring session-->
-    <dependency>
-      <groupId>org.springframework.session</groupId>
-      <artifactId>spring-session-data-redis</artifactId>
-      <version>1.2.0.RELEASE</version>
-    </dependency>
-  </dependencies>
 
-  <build>
-    <finalName>springmvc</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
-        <configuration>
-          <port>8080</port>
-          <path>/</path>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- activemq -->
+<!--        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <version>5.12.1</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+  <!--      <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-registry</artifactId>
+            <version>2.1.0</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>apache-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.databinder</groupId>
+            <artifactId>dispatch-http_2.11</artifactId>
+            <version>0.8.10</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+
+        <!--spring session-->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>1.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+            <version>2.5.6.SEC02</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.6.6</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.6</version>
+            </dependency>
+            <dependency>
+                <groupId>springmvc</groupId>
+                <artifactId>database</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
 
 </project>

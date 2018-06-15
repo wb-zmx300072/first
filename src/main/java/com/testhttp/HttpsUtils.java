@@ -1,3 +1,4 @@
+/*
 package com.testhttp;
 
 import org.apache.http.*;
@@ -50,7 +51,8 @@ public class HttpsUtils {
             e.printStackTrace();
         }
     }
-    /**
+    */
+/**
      * httpClient post请求
      * @param url 请求url
      * @param header 头部信息
@@ -59,7 +61,8 @@ public class HttpsUtils {
      * @return 可能为空 需要处理
      * @throws Exception
      *
-     */
+     *//*
+
     public static String post(String  url, Map<String, String> header, Map<String, String> param, HttpEntity entity) throws Exception {
         String result = "";
         CloseableHttpClient httpClient = null;
@@ -136,3 +139,4 @@ class  MapUtils{
         return param.size()>0;
     }
 }
+*/

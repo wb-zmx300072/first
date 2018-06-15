@@ -11,7 +11,7 @@ import org.springframework.core.io.ClassPathResource;
 public class BeanUtil {
 
     public static  Object getBean(String name){
-        BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beanFactoryTest.xml"));
+        BeanFactory bf = new XmlBeanFactory(new ClassPathResource("learnSpring/beanFactoryTest.xml"));
         try {
             Thread.sleep(5000L);
         } catch (InterruptedException e) {

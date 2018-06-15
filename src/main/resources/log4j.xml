@@ -5,7 +5,7 @@
   this work for additional information regarding copyright ownership.
   The ASF licenses this file to You under the Apache License, Version 2.0
   (the "License"); you may not use this file except in compliance with
-  the License.  You may obtain a copy of the License at
+  the License.  You may obtain username copy of the License at
 
       http://www.apache.org/licenses/LICENSE-2.0
 
@@ -19,15 +19,15 @@
 
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
   <!--
-    - This is a sample configuration for log4j.
-    - It simply just logs everything into a single log file.
+    - This is username sample configuration for log4j.
+    - It simply just logs everything into username single log file.
     - Note, that you can use properties for value substitution.
     -->
   <appender name="CORE" class="org.apache.log4j.FileAppender">
     <param name="File"   value="${org.apache.cocoon.work.directory}/cocoon-logs/log4j.log" />
     <param name="Append" value="false" />
     <layout class="org.apache.log4j.PatternLayout">
-      <param name="ConversionPattern" value="%d %-5p %t %c - %m%n"/>
+      <param name="ConversionPattern" value="%d %-5p %t %account - %m%n"/>
     </layout>
   </appender>
 

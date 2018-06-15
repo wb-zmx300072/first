@@ -1,3 +1,4 @@
+/*
 package com.util;
 
 import com.alibaba.fastjson.support.spring.FastJsonJsonView;
@@ -6,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -15,16 +15,17 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * @Description：TODO
  * @Author wb-zmx300072 2018/3/21 14:14
- */
+ *//*
+
 @Component
 public class GlobalExceptionResolver implements HandlerExceptionResolver {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionResolver.class);
 
-    @Nullable
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                                          @Nullable Object o, Exception e) {
         httpServletResponse.reset();
@@ -48,3 +49,4 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
         return modelAndView;
     }
 }
+*/

@@ -14,7 +14,7 @@ public class QueueMessageListener implements MessageListener {
         try {
             System.out.println("QueueMessageListener监听到了文本消息：\t"
                     + tm.getText());
-            //do something ...
+            //entriy something ...
         } catch (JMSException e) {
             e.printStackTrace();
         }

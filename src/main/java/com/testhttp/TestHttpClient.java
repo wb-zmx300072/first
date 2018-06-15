@@ -1,3 +1,4 @@
+/*
 package com.testhttp;
  
 import org.apache.http.*;
@@ -55,12 +56,14 @@ public class TestHttpClient {
     try {
       // 执行post请求
       HttpResponse httpResponse = client.execute(httpPost);
+*/
 /*      String location = httpResponse.getFirstHeader("Location")
           .getValue();
       if (location != null && location.startsWith(loginErrorUrl)) {
         System.out.println("----loginError");
       }
-      printResponse(httpResponse);*/
+      printResponse(httpResponse);*//*
+
 
 
 
@@ -203,3 +206,4 @@ public class TestHttpClient {
     return param;
   }
 }
+*/

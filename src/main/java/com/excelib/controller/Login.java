@@ -1,3 +1,4 @@
+/*
 package com.excelib.controller;
 
 import com.alibaba.fastjson.JSONObject;
@@ -9,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,13 +20,15 @@ public class Login {
 
     private  static Logger logger = LoggerFactory.getLogger(Login.class);
 
-    /**
+    */
+/**
      * @param username 用户名，一定要对应着表单的name才行
      * @param password 用户密码，也应该对应表单的数据项
      * @param model    一个域对象，可用于存储数据值
      * @return
      * @RequestParam注解的作用是：根据参数名从URL中取得参数值
-     */
+     *//*
+
     @RequestMapping("/login") // @RequestMapping 注解可以用指定的URL路径访问本控制层
     public String login(@RequestParam("username") String username, @RequestParam("password") String password,
                         Model model, HttpSession httpSession, HttpServletRequest request,
@@ -42,6 +44,7 @@ public class Login {
         httpSession.setAttribute("temp_user", JSONObject.toJSONString(user));
 //        redisPoolUtil.setex(httpSession.getId(), CookieUtil.LOGIN_SESSION_TIME, JSONObject.toJSONString(user));
         return "go";
+*/
 /*        if (username.equals("admin") && password.equals("admin")) {
             model.addAttribute("username", username);
             model.addAttribute ( "msg", "login success !!!" );
@@ -50,7 +53,8 @@ public class Login {
         } else {
             model.addAttribute("username", username);
             return "login.jsp";
-        }*/
+        }*//*
+
     }
 
     @RequestMapping("/getUser") // @RequestMapping 注解可以用指定的URL路径访问本控制层
@@ -82,3 +86,4 @@ public class Login {
     }
 
 }
+*/
